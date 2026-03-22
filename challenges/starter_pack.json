@@ -1,0 +1,75 @@
+{
+  "name": "Starter Pack",
+  "challenges": [
+    {
+      "id": "two-sum",
+      "name": "Two Sum",
+      "prompt": "Write a function called two_sum that takes a list of integers and a target integer. Return the indices of two numbers that add up to the target. Assume exactly one solution exists.",
+      "function_name": "two_sum",
+      "difficulty": "easy",
+      "category": "arrays",
+      "tags": ["arrays", "hash-map"],
+      "test_cases": [
+        {"input_args": [[2, 7, 11, 15], 9], "expected_output": [0, 1], "description": "Basic case"},
+        {"input_args": [[3, 2, 4], 6], "expected_output": [1, 2], "description": "Middle elements"},
+        {"input_args": [[3, 3], 6], "expected_output": [0, 1], "description": "Duplicate values"}
+      ]
+    },
+    {
+      "id": "palindrome-check",
+      "name": "Palindrome Check",
+      "prompt": "Write a function called is_palindrome that takes a string and returns True if it is a palindrome (ignoring case and non-alphanumeric characters), False otherwise.",
+      "function_name": "is_palindrome",
+      "difficulty": "easy",
+      "category": "strings",
+      "tags": ["strings", "two-pointers"],
+      "test_cases": [
+        {"input_args": ["racecar"], "expected_output": true, "description": "Simple palindrome"},
+        {"input_args": ["A man, a plan, a canal: Panama"], "expected_output": true, "description": "With punctuation"},
+        {"input_args": ["hello"], "expected_output": false, "description": "Not a palindrome"},
+        {"input_args": [""], "expected_output": true, "description": "Empty string"}
+      ]
+    },
+    {
+      "id": "flatten-nested",
+      "name": "Flatten Nested List",
+      "prompt": "Write a function called flatten that takes a deeply nested list and returns a flat list of all values. For example, flatten([1, [2, [3, 4], 5]]) should return [1, 2, 3, 4, 5].",
+      "function_name": "flatten",
+      "difficulty": "medium",
+      "category": "recursion",
+      "tags": ["recursion", "lists"],
+      "test_cases": [
+        {"input_args": [[[1, [2, [3, 4], 5]]]], "expected_output": [1, 2, 3, 4, 5], "description": "Nested list"},
+        {"input_args": [[[1, 2, 3]]], "expected_output": [1, 2, 3], "description": "Already flat"},
+        {"input_args": [[[]]], "expected_output": [], "description": "Empty nested"},
+        {"input_args": [[[1, [2, [3, [4, [5]]]]]]], "expected_output": [1, 2, 3, 4, 5], "description": "Deeply nested"}
+      ]
+    },
+    {
+      "id": "group-anagrams",
+      "name": "Group Anagrams",
+      "prompt": "Write a function called group_anagrams that takes a list of strings and groups anagrams together. Return a list of lists where each inner list contains strings that are anagrams of each other, sorted alphabetically within each group.",
+      "function_name": "group_anagrams",
+      "difficulty": "medium",
+      "category": "strings",
+      "tags": ["strings", "hash-map", "sorting"],
+      "test_cases": [
+        {"input_args": [["eat", "tea", "tan", "ate", "nat", "bat"]], "expected_output": [["ate", "eat", "tea"], ["bat"], ["nat", "tan"]], "description": "Mixed anagrams"},
+        {"input_args": [[""]], "expected_output": [[""]], "description": "Empty string"},
+        {"input_args": [["a"]], "expected_output": [["a"]], "description": "Single character"}
+      ]
+    },
+    {
+      "id": "lru-cache",
+      "name": "LRU Cache",
+      "prompt": "Write a function called create_lru_cache that takes a capacity integer and returns a dictionary-like object with get(key) and put(key, value) methods. get returns -1 if key not found. When capacity is exceeded, evict the least recently used item.",
+      "function_name": "create_lru_cache",
+      "difficulty": "hard",
+      "category": "data-structures",
+      "tags": ["hash-map", "linked-list", "design"],
+      "test_cases": [
+        {"input_args": [2], "expected_output": "cache_object", "description": "Creates cache with capacity 2"}
+      ]
+    }
+  ]
+}
